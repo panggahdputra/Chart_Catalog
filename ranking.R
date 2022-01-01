@@ -43,7 +43,7 @@ ordered_bar <- data_vis %>%
 
 ggsave("1_ordered_bar.png", plot(ordered_bar), dpi = 300)
 
-##########ordered_column_chart####
+#ordered_column_chart
 ordered_column <- data_vis %>%
   group_by(Variable) %>%
   summarise(number_of_data = n()) %>%
