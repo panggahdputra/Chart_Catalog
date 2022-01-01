@@ -1,7 +1,7 @@
-#load packages
+# load packages
 library(tidyverse)
 
-#data preparation
+# data preparation
 set.seed(2000)
 df1 = tibble(var = 'A', val = rnorm(n = 25, mean = 5.5, sd = 1.5))
 df2 = tibble(var = 'B', val = rnorm(n = 15, mean = 4.5, sd = 1.0))
@@ -24,7 +24,7 @@ theme_ranking <- theme_minimal() +
     axis.line.x.bottom = element_line( linetype = "solid")
   )
 
-#ordered_bar
+# ordered_bar
 ordered_bar <- data_vis %>%
   group_by(Variable) %>%
   summarise(number_of_data = n()) %>%
@@ -41,9 +41,9 @@ ordered_bar <- data_vis %>%
   labs(title = 'Ordered Bar',
        caption = 'visualization by PanggahDPutra, 2022')
 
-ggsave("1_ordered_bar.png", plot(ordered_bar), dpi = 300)
+ggsave("1_ordered_bar.png", plot(ordered_bar))
 
-#ordered_column_chart
+# ordered_column_chart
 ordered_column <- data_vis %>%
   group_by(Variable) %>%
   summarise(number_of_data = n()) %>%
@@ -58,4 +58,4 @@ ordered_column <- data_vis %>%
   labs(title = 'Ordered Column',
        caption = 'visualization by PanggahDPutra, 2022')
 
-ggsave("2_ordered_column.png", plot(ordered_column), dpi = 300)
+ggsave("2_ordered_column.png", plot(ordered_column))
