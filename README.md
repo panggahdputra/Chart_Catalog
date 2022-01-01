@@ -1,4 +1,4 @@
-# Chart_Catalog
+# Chart Catalog
  List of charts and how to create it in R
 
 ## Ordered Bar
