@@ -1,7 +1,7 @@
 # load packages
 library(tidyverse)
 
-# data preparation
+# dataset
 set.seed(2000)
 df1 = tibble(var = 'A', val = rnorm(n = 25, mean = 5.5, sd = 1.5))
 df2 = tibble(var = 'B', val = rnorm(n = 15, mean = 4.5, sd = 1.0))
@@ -14,12 +14,14 @@ main_df <- rbind(df1, df2, df3, df4, df5) %>%
          value = round(val, 2)) %>%
   select(Variable, value)
 
+# palette
 palette_ranking <- c('#3c0d03',
                      '#8d1c06',
                      '#e67424',
                      '#ed9b49',
                      '#f5c34d')
 
+#theme
 theme_ranking <- theme_minimal() +
   theme(
     plot.title = element_text(color = '#3c0d03',
