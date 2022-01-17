@@ -58,7 +58,6 @@ ordered_bar <- main_df %>%
   xlab('Variable') +
   ylab('number of data') +
   labs(title = 'Ordered Bar',
-       subtitle = '',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("1_ordered_bar.png", plot(ordered_bar), width = 8, height = 5, dpi = 300)
@@ -80,7 +79,6 @@ ordered_column <- main_df %>%
   xlab('number of data') +
   ylab('Variable') +
   labs(title = 'Ordered Column',
-       subtitle = '',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("2_ordered_column.png", plot(ordered_column), width = 8, height = 5, dpi = 300)
