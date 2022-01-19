@@ -146,6 +146,7 @@ slope_graph <- newggslopegraph(
   Measurement = val,
   Grouping = var,
   Title = 'Slope Graph',
+  SubTitle = '2010 - 2015 - 2020',
   Caption = 'visualization by PanggahDPutra, 2022',
   XTextSize = 12,
   YTextSize = 4,
