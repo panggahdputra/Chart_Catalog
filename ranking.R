@@ -1,7 +1,9 @@
 # load packages
 library(tidyverse)
+library(CGPfunctions) # to makes Slope Graph
+library(ggbump)       # to makes Bump Chart
 
-# dataset
+# main dataset
 set.seed(2000)
 df1 = tibble(var = 'A', val = rnorm(n = 25, mean = 5.5, sd = 1.5))
 df2 = tibble(var = 'B', val = rnorm(n = 15, mean = 4.5, sd = 1.0))
@@ -13,6 +15,35 @@ main_df <- rbind(df1, df2, df3, df4, df5) %>%
   mutate(Variable = as_factor(var),
          value = round(val, 2)) %>%
   select(Variable, value)
+
+# df for slope
+df_for_slope = tibble(var = c('A','B','C','D', 'E',
+                              'A','B','C','D', 'E',
+                              'A','B','C','D', 'E'),
+                      month = c('2010','2010','2010','2010','2010',
+                                '2015','2015','2015','2015','2015',
+                                '2020','2020','2020','2020','2020'),
+                      val = c(10,8,6,4,2,
+                              13,9,11,5,7,
+                              12,13,9,7,5))
+
+# df for bump
+set.seed(2021)
+df_6 = tibble(team = c('A','B','C','D','E'),
+              game_1 = sample(1:5),
+              game_2 = sample(1:5),
+              game_3 = sample(1:5),
+              game_4 = sample(1:5),
+              game_5 = sample(1:5))
+
+df_for_bump <- df_6 %>%
+  pivot_longer(!team, names_to = 'game', values_to = 'position') %>%
+  mutate(game = as.numeric(recode(game,
+                                  game_1 = 1,
+                                  game_2 = 2,
+                                  game_3 = 3,
+                                  game_4 = 4,
+                                  game_5 = 5)))
 
 # palette
 palette_ranking <- c('#3c0d03',
@@ -107,3 +138,113 @@ ordered_dot_strip_plot <- main_df %>%
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("3_ordered_dot_strip_plot.png", plot(ordered_dot_strip_plot), width = 7, height = 5, dpi = 300)
+
+# Slope Graph
+slope_graph <- newggslopegraph(
+  dataframe = df_for_slope,
+  Times = month,
+  Measurement = val,
+  Grouping = var,
+  Title = 'Slope Graph',
+  Caption = 'visualization by PanggahDPutra, 2022',
+  XTextSize = 12,
+  YTextSize = 4,
+  TitleTextSize = 14,
+  SubTitleTextSize = 10,
+  CaptionTextSize = 8,
+  TitleJustify = "center",
+  SubTitleJustify = "center",
+  CaptionJustify = "right",
+  LineThickness = 1.2,
+  LineColor = palette_ranking,
+  DataTextSize = 5,
+  DataTextColor = '#8d1c06',
+  DataLabelPadding = 0.1,
+  DataLabelFillColor = '#ffffff',
+  WiderLabels = TRUE) +
+  theme(plot.title = element_text(color = '#3c0d03'),
+        plot.subtitle = element_text(color = '#3c0d03'),
+        plot.caption = element_text(color = '#3c0d03'),
+        panel.background = element_rect(fill = '#ffffff',
+                                        color = NA),
+        plot.background = element_rect(fill = '#ffffff',
+                                       color = 'lightblue'))
+
+ggsave("4_slope_graph.png", plot(slope_graph), width = 7, height = 5, dpi = 300)
+
+# Lollipop
+lollipop <- main_df %>%
+  group_by(Variable) %>%
+  summarise(number_of_data = n()) %>%
+  ggplot(aes(x = reorder(Variable, -number_of_data),
+             y = number_of_data,
+             color = Variable,
+             fill = Variable)) +
+  geom_col(alpha = 1,
+           width = .05,
+           color = '#3c0d03',
+           fill = '#3c0d03',
+           show.legend = FALSE) +
+  geom_point(alpha = 1,
+             size = 24,
+             color = '#ed9b49',
+             show.legend = FALSE) +
+  geom_point(alpha = 1,
+             size = 21,
+             color = '#e67424',
+             show.legend = FALSE) +
+  geom_point(alpha = 1,
+             size = 18,
+             color = '#8d1c06',
+             show.legend = FALSE) +
+  geom_point(alpha = 1,
+             size = 15,
+             color = '#3c0d03',
+             show.legend = FALSE) +
+  geom_text(aes(x = Variable,
+                y = number_of_data,
+                label = number_of_data), 
+            size = 5,
+            color = '#f5c34d') +
+  scale_y_continuous(limits = c(0,35)) +
+  theme_ranking +
+  theme(axis.text.y = element_blank()) +
+  xlab('Variable') +
+  ylab('number of data') +
+  labs(title = 'Lollipop',
+       caption = 'visualization by PanggahDPutra, 2022')
+
+ggsave("5_lollipop.png", plot(lollipop), width = 7, height = 5, dpi = 300)
+
+# Bump Chart
+bump <- df_for_bump %>%
+  ggplot(aes(x = game,
+             y = position,
+             color = team)) +
+  ggbump::geom_bump(size = 3,
+                    smooth = 20,
+                    show.legend = FALSE) +
+  geom_point(size = 7) +
+  geom_text(aes(label = position),
+            size = 4,
+            color = "white") +
+  geom_text(data = df_for_bump %>% filter(game == min(game)),
+            aes(x = game - .1,
+                label = team),
+            size = 5,
+            hjust = 1) +
+  geom_text(data = df_for_bump %>% filter(game == max(game)),
+            aes(x = game + .1,
+                label = team),
+            size = 5,
+            hjust = 0) +
+  scale_color_manual(values = palette_ranking,
+                     guide = 'none') +
+  scale_y_reverse() +
+  theme_ranking +
+  xlab('Game-') +
+  ylab('Ranking') +
+  labs(title = 'Bump Chart',
+       caption = 'visualization by PanggahDPutra, 2022')
+
+ggsave("6_bump.png", plot(bump), width = 7, height = 5, dpi = 300)
