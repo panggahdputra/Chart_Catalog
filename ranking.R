@@ -60,7 +60,7 @@ ordered_bar <- main_df %>%
   labs(title = 'Ordered Bar',
        caption = 'visualization by PanggahDPutra, 2022')
 
-ggsave("1_ordered_bar.png", plot(ordered_bar), width = 8, height = 5, dpi = 300)
+ggsave("1_ordered_bar.png", plot(ordered_bar), width = 7, height = 5, dpi = 300)
 
 # Ordered Column
 ordered_column <- main_df %>%
@@ -81,7 +81,7 @@ ordered_column <- main_df %>%
   labs(title = 'Ordered Column',
        caption = 'visualization by PanggahDPutra, 2022')
 
-ggsave("2_ordered_column.png", plot(ordered_column), width = 8, height = 5, dpi = 300)
+ggsave("2_ordered_column.png", plot(ordered_column), width = 7, height = 5, dpi = 300)
 
 # Ordered Dot Strip Plot
 ordered_dot_strip_plot <- main_df %>%
@@ -106,4 +106,4 @@ ordered_dot_strip_plot <- main_df %>%
   labs(title = 'Ordered Dot Strip Plot',
        caption = 'visualization by PanggahDPutra, 2022')
 
-ggsave("3_ordered_dot_strip_plot.png", plot(ordered_dot_strip_plot), width = 8, height = 5, dpi = 300)
+ggsave("3_ordered_dot_strip_plot.png", plot(ordered_dot_strip_plot), width = 7, height = 5, dpi = 300)
