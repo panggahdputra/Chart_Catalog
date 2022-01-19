@@ -10,6 +10,17 @@ This is my practice of making chart based on [Financial Times visual vocabulary]
   * [Lollipop](#lollipop)
   * [Bump Chart](#bump-chart)
   * [Ordered Proportional Symbol](#ordered-proportional-symbol)
+- [Distribution](#distribution)
+  * [Histograms](#histograms)
+  * [Dumbbell Plot](#dumbbell-plot)
+  * [Dot Strip Plot](#dot-strip-plot)
+  * [Barcode Plot](#barcode-plot)
+  * [Box Plot](#box-plot)
+  * [Violin Plot](#violin-plot)
+  * [Beeswarm](#beeswarm)
+  * [Population Pyramid](#population-pyramid)
+  * [Cumulative curve](#cumulative-curve)
+  * [Frequency Polygons](#frequency-polygons)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -33,4 +44,26 @@ This is my practice of making chart based on [Financial Times visual vocabulary]
 ![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/6_bump.png)
 
 ### Ordered Proportional Symbol
+not done yet
+
+## Distribution
+### Histograms
+not done yet
+### Dumbbell Plot
+not done yet
+### Dot Strip Plot
+not done yet
+### Barcode Plot
+not done yet
+### Box Plot
+not done yet
+### Violin Plot
+not done yet
+### Beeswarm
+not done yet
+### Population Pyramid
+not done yet
+### Cumulative curve 
+not done yet
+### Frequency Polygons 
 not done yet
