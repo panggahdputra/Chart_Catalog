@@ -26,29 +26,30 @@ This is my practice of making chart based on [Financial Times visual vocabulary]
 
 ## Ranking
 ### Ordered Bar
-![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/1_ordered_bar.png)
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/ranking_ordered_bar.png)
 
 ### Ordered Column
-![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/2_ordered_column.png)
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/ranking_ordered_column.png)
 
 ### Ordered Dot Strip Plot
-![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/3_ordered_dot_strip_plot.png)
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/ranking_ordered_dot_strip_plot.png)
 
 ### Slope Graph
-![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/4_slope_graph.png)
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/ranking_slope_graph.png)
 
 ### Lollipop
-![Lollipop](https://github.com/panggahdputra/Visual-Vocab/blob/main/5_lollipop.png)
+![Lollipop](https://github.com/panggahdputra/Visual-Vocab/blob/main/ranking_lollipop.png)
 
 ### Bump Chart
-![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/6_bump.png)
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/ranking_bump.png)
 
 ### Ordered Proportional Symbol
 not done yet
 
 ## Distribution
 ### Histograms
-not done yet
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_histograms.png)
+
 ### Dumbbell Plot
 not done yet
 ### Dot Strip Plot
