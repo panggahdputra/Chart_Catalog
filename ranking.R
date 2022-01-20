@@ -91,7 +91,7 @@ ordered_bar <- main_df %>%
   labs(title = 'Ordered Bar',
        caption = 'visualization by PanggahDPutra, 2022')
 
-ggsave("1_ordered_bar.png", plot(ordered_bar), width = 7, height = 5, dpi = 300)
+ggsave("ranking_ordered_bar.png", plot(ordered_bar), width = 7, height = 5, dpi = 300)
 
 # Ordered Column
 ordered_column <- main_df %>%
@@ -112,7 +112,7 @@ ordered_column <- main_df %>%
   labs(title = 'Ordered Column',
        caption = 'visualization by PanggahDPutra, 2022')
 
-ggsave("2_ordered_column.png", plot(ordered_column), width = 7, height = 5, dpi = 300)
+ggsave("ranking_ordered_column.png", plot(ordered_column), width = 7, height = 5, dpi = 300)
 
 # Ordered Dot Strip Plot
 ordered_dot_strip_plot <- main_df %>%
@@ -137,7 +137,7 @@ ordered_dot_strip_plot <- main_df %>%
   labs(title = 'Ordered Dot Strip Plot',
        caption = 'visualization by PanggahDPutra, 2022')
 
-ggsave("3_ordered_dot_strip_plot.png", plot(ordered_dot_strip_plot), width = 7, height = 5, dpi = 300)
+ggsave("ranking_ordered_dot_strip_plot.png", plot(ordered_dot_strip_plot), width = 7, height = 5, dpi = 300)
 
 # Slope Graph
 slope_graph <- newggslopegraph(
@@ -171,7 +171,7 @@ slope_graph <- newggslopegraph(
         plot.background = element_rect(fill = '#ffffff',
                                        color = 'lightblue'))
 
-ggsave("4_slope_graph.png", plot(slope_graph), width = 7, height = 5, dpi = 300)
+ggsave("ranking_slope_graph.png", plot(slope_graph), width = 7, height = 5, dpi = 300)
 
 # Lollipop
 lollipop <- main_df %>%
@@ -215,7 +215,7 @@ lollipop <- main_df %>%
   labs(title = 'Lollipop',
        caption = 'visualization by PanggahDPutra, 2022')
 
-ggsave("5_lollipop.png", plot(lollipop), width = 7, height = 5, dpi = 300)
+ggsave("ranking_lollipop.png", plot(lollipop), width = 7, height = 5, dpi = 300)
 
 # Bump Chart
 bump <- df_for_bump %>%
@@ -248,4 +248,4 @@ bump <- df_for_bump %>%
   labs(title = 'Bump Chart',
        caption = 'visualization by PanggahDPutra, 2022')
 
-ggsave("6_bump.png", plot(bump), width = 7, height = 5, dpi = 300)
+ggsave("ranking_bump.png", plot(bump), width = 7, height = 5, dpi = 300)
