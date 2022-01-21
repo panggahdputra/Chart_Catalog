@@ -5,11 +5,11 @@ This is my practice of making chart based on [Financial Times visual vocabulary]
 - [Ranking](#ranking)
   * [Ordered Bar](#ordered-bar)
   * [Ordered Column](#ordered-column)
+  * [Ordered Proportional Symbol](#ordered-proportional-symbol)
   * [Ordered Dot Strip Plot](#ordered-dot-strip-plot)
   * [Slope Graph](#slope-graph)
   * [Lollipop](#lollipop)
   * [Bump Chart](#bump-chart)
-  * [Ordered Proportional Symbol](#ordered-proportional-symbol)
 - [Distribution](#distribution)
   * [Histograms](#histograms)
   * [Dumbbell Plot](#dumbbell-plot)
@@ -31,6 +31,9 @@ This is my practice of making chart based on [Financial Times visual vocabulary]
 ### Ordered Column
 ![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/ranking_ordered_column.png)
 
+### Ordered Proportional Symbol
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/ranking_ordered_prop_symbol.png)
+
 ### Ordered Dot Strip Plot
 ![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/ranking_ordered_dot_strip_plot.png)
 
@@ -42,9 +45,6 @@ This is my practice of making chart based on [Financial Times visual vocabulary]
 
 ### Bump Chart
 ![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/ranking_bump.png)
-
-### Ordered Proportional Symbol
-not done yet
 
 ## Distribution
 ### Histograms
