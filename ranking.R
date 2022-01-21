@@ -114,6 +114,32 @@ ordered_column <- main_df %>%
 
 ggsave("ranking_ordered_column.png", plot(ordered_column), width = 7, height = 5, dpi = 300)
 
+# Ordered Proportional Symbol
+ordered_prop_symbol <- main_df %>%
+  group_by(Variable) %>%
+  summarise(number_of_data = n()) %>%
+  ggplot(aes(x = reorder(Variable, -number_of_data),
+             y = 0,
+             color = reorder(Variable, -number_of_data),
+             fill = reorder(Variable, -number_of_data))) +
+  geom_point(aes(size = number_of_data), show.legend = FALSE) +
+  geom_text(aes(label = Variable),
+            size = 7,
+            color = 'white') +
+  scale_size_area(max_size = 40) +
+  scale_color_manual(values = palette_ranking,
+                     guide = 'none') +
+  scale_fill_manual(values = palette_ranking,
+                    guide = 'none') +
+  scale_y_continuous(limits = c(-1,1)) +
+  theme_ranking +
+  theme(axis.title = element_blank(),
+        axis.text = element_blank()) +
+  labs(title = 'Ordered Proportional Symbol',
+       caption = 'visualization by PanggahDPutra, 2022')
+
+ggsave("ranking_ordered_prop_symbol.png", plot(ordered_prop_symbol), width = 7, height = 5, dpi = 300)
+
 # Ordered Dot Strip Plot
 ordered_dot_strip_plot <- main_df %>%
   ggplot(aes(x = reorder(Variable, -value),
@@ -202,9 +228,7 @@ lollipop <- main_df %>%
              size = 15,
              color = '#3c0d03',
              show.legend = FALSE) +
-  geom_text(aes(x = Variable,
-                y = number_of_data,
-                label = number_of_data), 
+  geom_text(aes(label = number_of_data), 
             size = 5,
             color = '#f5c34d') +
   scale_y_continuous(limits = c(0,35)) +
@@ -228,7 +252,7 @@ bump <- df_for_bump %>%
   geom_point(size = 7) +
   geom_text(aes(label = position),
             size = 4,
-            color = "white") +
+            color = 'white') +
   geom_text(data = df_for_bump %>% filter(game == min(game)),
             aes(x = game - .1,
                 label = team),
