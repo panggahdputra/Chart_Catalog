@@ -68,3 +68,5 @@ not done yet
 not done yet
 ### Frequency Polygons 
 not done yet
+
+[⤴️ Back to Top](#visual-vocabulary)
