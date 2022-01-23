@@ -60,13 +60,13 @@ not done yet
 not done yet
 ### Violin Plot
 not done yet
-### Beeswarm
-not done yet
 ### Population Pyramid
 not done yet
-### Cumulative curve 
+### Cumulative Curve 
 not done yet
 ### Frequency Polygons 
+not done yet
+### Beeswarm
 not done yet
 
 [⤴️ Back to Top](#visual-vocabulary)
