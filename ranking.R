@@ -16,17 +16,6 @@ main_df <- rbind(df1, df2, df3, df4, df5) %>%
          value = round(val, 2)) %>%
   select(Variable, value)
 
-# df for slope
-df_for_slope = tibble(var = c('A','B','C','D', 'E',
-                              'A','B','C','D', 'E',
-                              'A','B','C','D', 'E'),
-                      month = c('2010','2010','2010','2010','2010',
-                                '2015','2015','2015','2015','2015',
-                                '2020','2020','2020','2020','2020'),
-                      val = c(10,8,6,4,2,
-                              13,9,11,5,7,
-                              12,13,9,7,5))
-
 # df for bump
 set.seed(2021)
 df_6 = tibble(team = c('A','B','C','D','E'),
@@ -44,6 +33,19 @@ df_for_bump <- df_6 %>%
                                   game_3 = 3,
                                   game_4 = 4,
                                   game_5 = 5)))
+
+# df for slope
+df_for_slope = tibble(var = c('A','B','C','D', 'E',
+                              'A','B','C','D', 'E',
+                              'A','B','C','D', 'E'),
+                      year = c('2010','2010','2010','2010','2010',
+                               '2015','2015','2015','2015','2015',
+                               '2020','2020','2020','2020','2020'),
+                      val = c(10,8,6,4,2,
+                              13,9,11,5,7,
+                              12,13,9,7,5))
+
+
 
 # palette
 palette_ranking <- c('#3c0d03',
@@ -166,9 +168,9 @@ ordered_dot_strip_plot <- main_df %>%
 ggsave("ranking_ordered_dot_strip_plot.png", plot(ordered_dot_strip_plot), width = 7, height = 5, dpi = 300)
 
 # Slope Graph
-slope_graph <- newggslopegraph(
+slope_graph <- CGPfunctions::newggslopegraph(
   dataframe = df_for_slope,
-  Times = month,
+  Times = year,
   Measurement = val,
   Grouping = var,
   Title = 'Slope Graph',
@@ -195,7 +197,7 @@ slope_graph <- newggslopegraph(
         panel.background = element_rect(fill = '#ffffff',
                                         color = NA),
         plot.background = element_rect(fill = '#ffffff',
-                                       color = 'lightblue'))
+                                       color = 'lightblue')) 
 
 ggsave("ranking_slope_graph.png", plot(slope_graph), width = 7, height = 5, dpi = 300)
 
