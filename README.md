@@ -11,7 +11,7 @@ This is my practice of making chart based on [Financial Times visual vocabulary]
   * [Lollipop](#lollipop)
   * [Bump Chart](#bump-chart)
 - [Distribution](#distribution)
-  * [Histograms](#histograms)
+  * [Histogram](#histogram)
   * [Dumbbell Plot](#dumbbell-plot)
   * [Dot Strip Plot](#dot-strip-plot)
   * [Barcode Plot](#barcode-plot)
@@ -47,8 +47,8 @@ This is my practice of making chart based on [Financial Times visual vocabulary]
 ![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/ranking_bump.png)
 
 ## Distribution
-### Histograms
-![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_histograms.png)
+### Histogram
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_histogram.png)
 
 ### Dumbbell Plot
 not done yet
