@@ -51,22 +51,30 @@ This is my practice of making chart based on [Financial Times visual vocabulary]
 ![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_histogram.png)
 
 ### Dumbbell Plot
-not done yet
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_dumbbell_plot.png)
+
 ### Dot Strip Plot
-not done yet
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_dot_strip_plot.png)
+
 ### Barcode Plot
-not done yet
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_barcode_plot.png)
+
 ### Box Plot
-not done yet
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_box_plot.png)
+
 ### Violin Plot
-not done yet
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_violin_plot.png)
+
 ### Population Pyramid
-not done yet
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_pop_pyramid.png)
+
 ### Cumulative Curve 
-not done yet
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_cumulative_curve.png)
+
 ### Frequency Polygons 
-not done yet
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_freq_polygons.png)
+
 ### Beeswarm
-not done yet
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_beeswarm.png)
 
 [⤴️ Back to Top](#visual-vocabulary)
