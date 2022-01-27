@@ -17,10 +17,12 @@ This is my practice of making chart based on [Financial Times visual vocabulary]
   * [Barcode Plot](#barcode-plot)
   * [Box Plot](#box-plot)
   * [Violin Plot](#violin-plot)
-  * [Beeswarm](#beeswarm)
   * [Population Pyramid](#population-pyramid)
   * [Cumulative curve](#cumulative-curve)
   * [Frequency Polygons](#frequency-polygons)
+  * [Beeswarm](#beeswarm)
+  * [Density Plot](#density-plot)
+  * [Stat Density Ridges Plot](#stat-density-ridges-plot)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -76,5 +78,11 @@ This is my practice of making chart based on [Financial Times visual vocabulary]
 
 ### Beeswarm
 ![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_beeswarm.png)
+
+### Density Plot 
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_density_plot.png)
+
+### Stat Density Ridges Plot
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_stat_density_ridges_plot.png)
 
 [⤴️ Back to Top](#visual-vocabulary)
