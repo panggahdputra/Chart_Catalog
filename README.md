@@ -1,5 +1,5 @@
 # Visual Vocabulary
-This is my practice of making chart based on [Financial Times visual vocabulary](https://github.com/Financial-Times/chart-doctor/tree/main/visual-vocabulary).
+This is my practice of making charts based on [Financial Times visual vocabulary](https://github.com/Financial-Times/chart-doctor/tree/main/visual-vocabulary).
 
 ## Table of Content
 - [Ranking](#ranking)
