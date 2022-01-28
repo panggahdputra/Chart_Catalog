@@ -6,7 +6,7 @@ This is my practice of making chart based on [Financial Times visual vocabulary]
   * [Ordered Bar](#ordered-bar)
   * [Ordered Column](#ordered-column)
   * [Ordered Proportional Symbol](#ordered-proportional-symbol)
-  * [Ordered Dot Strip Plot](#ordered-dot-strip-plot)
+  * [Dot Strip Plot](#dot-strip-plot)
   * [Slope Graph](#slope-graph)
   * [Lollipop](#lollipop)
   * [Bump Chart](#bump-chart)
@@ -21,8 +21,6 @@ This is my practice of making chart based on [Financial Times visual vocabulary]
   * [Cumulative curve](#cumulative-curve)
   * [Frequency Polygons](#frequency-polygons)
   * [Beeswarm](#beeswarm)
-  * [Density Plot](#density-plot)
-  * [Stat Density Ridges Plot](#stat-density-ridges-plot)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -36,8 +34,8 @@ This is my practice of making chart based on [Financial Times visual vocabulary]
 ### Ordered Proportional Symbol
 ![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/ranking_ordered_prop_symbol.png)
 
-### Ordered Dot Strip Plot
-![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/ranking_ordered_dot_strip_plot.png)
+### Dot Strip Plot
+![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/ranking_dot_strip_plot.png)
 
 ### Slope Graph
 ![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/ranking_slope_graph.png)
@@ -78,11 +76,5 @@ This is my practice of making chart based on [Financial Times visual vocabulary]
 
 ### Beeswarm
 ![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_beeswarm.png)
-
-### Density Plot 
-![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_density_plot.png)
-
-### Stat Density Ridges Plot
-![alt_text](https://github.com/panggahdputra/Visual-Vocab/blob/main/dist_stat_density_ridges_plot.png)
 
 [⤴️ Back to Top](#visual-vocabulary)
