@@ -16,6 +16,18 @@ main_df <- rbind(df1, df2, df3, df4, df5) %>%
          value = round(val, 2)) %>%
   select(Variable, value)
 
+# df for dot strip plot
+set.seed(2000)
+dfa = tibble(var = LETTERS[seq( from = 1, to = 20 )], val = sample(1:100, 20), year = '2018')
+dfb = tibble(var = LETTERS[seq( from = 1, to = 20 )], val = sample(1:100, 20), year = '2019')
+dfc = tibble(var = LETTERS[seq( from = 1, to = 20 )], val = sample(1:100, 20), year = '2020')
+dfd = tibble(var = LETTERS[seq( from = 1, to = 20 )], val = sample(1:100, 20), year = '2021')
+dfe = tibble(var = LETTERS[seq( from = 1, to = 20 )], val = sample(1:100, 20), year = '2022')
+
+df_for_dotstrip <- rbind(dfa, dfb, dfc, dfd, dfe) %>%
+  rename(Variable = var,
+         value = val)
+
 # df for bump
 set.seed(2021)
 df_6 = tibble(team = c('A','B','C','D','E'),
@@ -143,29 +155,28 @@ ordered_prop_symbol <- main_df %>%
 ggsave("ranking_ordered_prop_symbol.png", plot(ordered_prop_symbol), width = 7, height = 5, dpi = 300)
 
 # Ordered Dot Strip Plot
-ordered_dot_strip_plot <- main_df %>%
-  ggplot(aes(x = reorder(Variable, -value),
-             y = value,
-             color = reorder(Variable, -value),
-             fill = reorder(Variable, -value))) +
-  geom_point(alpha = .5, size = 5) +
+dot_strip_plot <- df_for_dotstrip %>%
+  ggplot(aes(x = value,
+             y = year,
+             color = year,
+             fill = year)) +
+  geom_point(size = 7) +
+  geom_text(aes(label = Variable),
+            size = 3,
+            color = 'white') +
+  stat_summary(fun = "median", size = 10, geom = "point", shape = 124) + 
   scale_color_manual(values = palette_ranking,
                      guide = 'none') +
   scale_fill_manual(values = palette_ranking,
                     guide = 'none') +
-  scale_y_continuous(limits = c(0,10),
-                     breaks = c(0,2,4,6,8,10)) +
-  stat_summary(fun = 'max',
-               geom = "text",
-               label = "max",
-               size = 5,
-               vjust = -1) + 
   theme_ranking +
-  xlab('Variable') +
-  labs(title = 'Ordered Dot Strip Plot',
+  theme(
+    axis.title.y = element_blank()
+  ) +
+  labs(title = 'Dot Strip Plot',
        caption = 'visualization by PanggahDPutra, 2022')
 
-ggsave("ranking_ordered_dot_strip_plot.png", plot(ordered_dot_strip_plot), width = 7, height = 5, dpi = 300)
+ggsave("ranking_dot_strip_plot.png", plot(dot_strip_plot), width = 7, height = 5, dpi = 300)
 
 # Slope Graph
 slope_graph <- CGPfunctions::newggslopegraph(
@@ -275,3 +286,14 @@ bump <- df_for_bump %>%
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("ranking_bump.png", plot(bump), width = 7, height = 5, dpi = 300)
+
+# df for dot strip plot
+df_for_dotstrip = tibble(Variable = c('A','B','C','D', 'E',
+                                      'A','B','C','D', 'E',
+                                      'A','B','C','D', 'E'),
+                         year = c('2018','2018','2018','2018','2018',
+                               '2019','2019','2019','2019','2019',
+                               '2020','2020','2020','2020','2020'),
+                         value = c(1,2,3,4,5,
+                                   2,4,5,3,1,
+                                   3,5,2,1,4))

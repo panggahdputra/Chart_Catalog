@@ -189,25 +189,6 @@ dot_strip_plot <- main_df %>%
 
 ggsave("dist_dot_strip_plot.png", plot(dot_strip_plot), width = 7, height = 5, dpi = 300)
 
-# Stat Dot Plot
-stat_dot_plot <- main_df %>%
-  ggplot(aes(x = Variable,
-             y = value,
-             color = Variable,
-             fill = Variable)) +
-  ggdist::stat_dots(side = 'right') +
-  scale_color_manual(values = palette_distr,
-                     guide = 'none') +
-  scale_fill_manual(values = palette_distr,
-                    guide = 'none') +
-  scale_y_continuous(limits = c(0,10),
-                     breaks = c(0,2,4,6,8,10)) +
-  theme_distr +
-  labs(title = 'Stat Dot Plot',
-       caption = 'visualization by PanggahDPutra, 2022')
-
-ggsave("dist_stat_dot_plot.png", plot(stat_dot_plot), width = 7, height = 5, dpi = 300)
-
 # Barcode Plot
 barcode_plot <- main_df %>%
   ggplot(aes(x = Variable,
@@ -400,41 +381,3 @@ beeswarm <- main_df %>%
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("dist_beeswarm.png", plot(beeswarm), width = 7, height = 5, dpi = 300)
-
-# Density Plot
-density_plot <- main_df %>%
-  ggplot(aes(x = value)) +
-  geom_density(alpha = 0.9,
-               fill = '#845d29',
-               color = '#4e3910') +
-  scale_x_continuous(limits = c(0,10),
-                     breaks = c(0,2,4,6,8,10)) +
-  theme_distr +
-  ylab('density') +
-  labs(title = 'Density Plot',
-       caption = 'visualization by PanggahDPutra, 2022')
-
-ggsave("dist_density_plot.png", plot(density_plot), width = 7, height = 5, dpi = 300)
-
-# Stat Density Ridges Plot
-stat_density_ridges_plot <- main_df %>%
-  ggplot(aes(x = value,
-             y = Variable,
-             fill = Variable,
-             color = Variable)) +
-  ggridges::stat_density_ridges(quantile_lines = TRUE,
-                                quantiles = 2,
-                                alpha = .5,
-                                size = .8,
-                                rel_min_height = 0.01) +
-  scale_color_manual(values = palette_distr,
-                     guide = 'none') +
-  scale_fill_manual(values = palette_distr,
-                    guide = 'none') +
-  scale_x_continuous(limits = c(0,10),
-                     breaks = c(0,2,4,6,8,10)) +
-  theme_distr +
-  labs(title = 'Stat Density Ridges Plot',
-       caption = 'visualization by PanggahDPutra, 2022')
-
-ggsave("dist_stat_density_ridges_plot.png", plot(stat_density_ridges_plot), width = 7, height = 5, dpi = 300)
