@@ -165,7 +165,10 @@ dot_strip_plot <- df_for_rank_dotstrip %>%
   geom_text(aes(label = Variable),
             size = 3,
             color = 'white') +
-  stat_summary(fun = "median", size = 10, geom = "point", shape = 124) + 
+  stat_summary(fun = "median",
+               geom = "point",
+               shape = 124,
+               size = 10, ) + 
   scale_color_manual(values = palette_ranking,
                      guide = 'none') +
   scale_fill_manual(values = palette_ranking,
