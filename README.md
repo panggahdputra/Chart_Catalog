@@ -1,7 +1,7 @@
 # Visual Vocabulary
 This is my practice of making charts based on [Financial Times visual vocabulary](https://github.com/Financial-Times/chart-doctor/tree/main/visual-vocabulary).
 
-## Table of Content
+## Table of Contents
 - [Ranking](#ranking)
   * [Ordered Bar](#ordered-bar)
   * [Ordered Column](#ordered-column)
