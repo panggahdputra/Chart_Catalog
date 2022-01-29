@@ -24,7 +24,7 @@ dfc = tibble(var = LETTERS[seq( from = 1, to = 20 )], val = sample(1:100, 20), y
 dfd = tibble(var = LETTERS[seq( from = 1, to = 20 )], val = sample(1:100, 20), year = '2021')
 dfe = tibble(var = LETTERS[seq( from = 1, to = 20 )], val = sample(1:100, 20), year = '2022')
 
-df_for_dotstrip <- rbind(dfa, dfb, dfc, dfd, dfe) %>%
+df_for_rank_dotstrip <- rbind(dfa, dfb, dfc, dfd, dfe) %>%
   rename(Variable = var,
          value = val)
 
@@ -154,13 +154,14 @@ ordered_prop_symbol <- main_df %>%
 
 ggsave("ranking_ordered_prop_symbol.png", plot(ordered_prop_symbol), width = 7, height = 5, dpi = 300)
 
-# Ordered Dot Strip Plot
-dot_strip_plot <- df_for_dotstrip %>%
+# Dot Strip Plot
+dot_strip_plot <- df_for_rank_dotstrip %>%
   ggplot(aes(x = value,
              y = year,
              color = year,
              fill = year)) +
-  geom_point(size = 7) +
+  geom_point(alpha = .7,
+             size = 7) +
   geom_text(aes(label = Variable),
             size = 3,
             color = 'white') +
