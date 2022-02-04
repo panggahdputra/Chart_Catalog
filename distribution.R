@@ -122,6 +122,7 @@ histogram <- main_df %>%
   theme_distr +
   ylab('number of data') +
   labs(title = 'Histogram',
+       subtitle = '',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("dist_histogram.png", plot(histogram), width = 7, height = 5, dpi = 300)
@@ -166,6 +167,7 @@ dumbbell_plot <- main_df %>%
   theme_distr +
   xlab('min <<<value>>> max') +
   labs(title = 'Dot Plot (Dumbbell Plot)',
+       subtitle = '',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("dist_dumbbell_plot.png", plot(dumbbell_plot), width = 7, height = 5, dpi = 300)
@@ -185,6 +187,7 @@ dot_strip_plot <- main_df %>%
                      breaks = c(0,2,4,6,8,10)) +
   theme_distr +
   labs(title = 'Dot Strip Plot',
+       subtitle = '',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("dist_dot_strip_plot.png", plot(dot_strip_plot), width = 7, height = 5, dpi = 300)
@@ -206,6 +209,7 @@ barcode_plot <- main_df %>%
                      breaks = c(0,2,4,6,8,10)) +
   theme_distr +
   labs(title = 'Barcode Plot',
+       subtitle = '',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("dist_barcode_plot.png", plot(barcode_plot), width = 7, height = 5, dpi = 300)
@@ -227,6 +231,7 @@ box_plot <- main_df %>%
                      breaks = c(0,2,4,6,8,10)) +
   theme_distr +
   labs(title = 'Box Plot',
+       subtitle = '',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("dist_box_plot.png", plot(box_plot), width = 7, height = 5, dpi = 300)
@@ -247,6 +252,7 @@ violin_plot <- main_df %>%
                      breaks = c(0,2,4,6,8,10)) +
   theme_distr +
   labs(title = 'Violin Plot',
+       subtitle = '',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("dist_violin_plot.png", plot(violin_plot), width = 7, height = 5, dpi = 300)
@@ -308,6 +314,7 @@ male_side <- df_for_pop_pyramid %>%
 pop_pyramid <- (male_side|female_side) +
   patchwork::plot_annotation(
     title = "Population Pyramid",
+    subtitle = '',
     caption = 'visualization by PanggahDPutra, 2022',
     theme = theme(
       plot.title = element_text(color = '#1d1f54',
@@ -339,6 +346,7 @@ cumulative_curve <- df_for_cum_curve %>%
   theme_distr +
   ylab('cumulative value') +
   labs(title = 'Cumulative Curve',
+       subtitle = '',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("dist_cumulative_curve.png", plot(cumulative_curve), width = 7, height = 5, dpi = 300)
@@ -356,6 +364,7 @@ freq_polygons <- main_df %>%
   theme_distr +
   ylab('frequency') +
   labs(title = 'Frequency Polygons',
+       subtitle = '',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("dist_freq_polygons.png", plot(freq_polygons), width = 7, height = 5, dpi = 300)
@@ -378,6 +387,7 @@ beeswarm <- main_df %>%
                      breaks = c(0,2,4,6,8,10)) +
   theme_distr +
   labs(title = 'Beeswarm',
+       subtitle = '',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("dist_beeswarm.png", plot(beeswarm), width = 7, height = 5, dpi = 300)
