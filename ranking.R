@@ -258,6 +258,7 @@ lollipop <- main_df %>%
   xlab('Variable') +
   ylab('number of data') +
   labs(title = 'Lollipop',
+       subtitle = "",
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("ranking_lollipop.png", plot(lollipop), width = 7, height = 5, dpi = 300)
