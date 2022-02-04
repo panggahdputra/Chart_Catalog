@@ -103,6 +103,7 @@ ordered_bar <- main_df %>%
   xlab('Variable') +
   ylab('number of data') +
   labs(title = 'Ordered Bar',
+       subtitle = 'Standard bar charts display the ranks of values much more easily when sorted into order',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("ranking_ordered_bar.png", plot(ordered_bar), width = 7, height = 5, dpi = 300)
@@ -124,6 +125,7 @@ ordered_column <- main_df %>%
   xlab('number of data') +
   ylab('Variable') +
   labs(title = 'Ordered Column',
+       subtitle = 'Standard bar charts display the ranks of values much more easily when sorted into order',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("ranking_ordered_column.png", plot(ordered_column), width = 7, height = 5, dpi = 300)
@@ -150,6 +152,7 @@ ordered_prop_symbol <- main_df %>%
   theme(axis.title = element_blank(),
         axis.text = element_blank()) +
   labs(title = 'Ordered Proportional Symbol',
+       subtitle = 'Use when there are big variations between values and/or seeing fine differences between data is not so important',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("ranking_ordered_prop_symbol.png", plot(ordered_prop_symbol), width = 7, height = 5, dpi = 300)
@@ -178,6 +181,7 @@ dot_strip_plot <- df_for_rank_dotstrip %>%
     axis.title.y = element_blank()
   ) +
   labs(title = 'Dot Strip Plot',
+       subtitle = 'Dots placed in order on a strip are a space-efficient method of laying out ranks across multiple categories',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("ranking_dot_strip_plot.png", plot(dot_strip_plot), width = 7, height = 5, dpi = 300)
@@ -189,7 +193,7 @@ slope_graph <- CGPfunctions::newggslopegraph(
   Measurement = val,
   Grouping = var,
   Title = 'Slope Graph',
-  SubTitle = '2010 - 2015 - 2020',
+  SubTitle = 'Perfect for showing how ranks have changed over time or vary between categories',
   Caption = 'visualization by PanggahDPutra, 2022',
   XTextSize = 12,
   YTextSize = 4,
@@ -254,6 +258,7 @@ lollipop <- main_df %>%
   xlab('Variable') +
   ylab('number of data') +
   labs(title = 'Lollipop',
+       subtitle = 'Lollipops draw more attention to the data value than standard bar/column and can also rank and value effectively',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("ranking_lollipop.png", plot(lollipop), width = 7, height = 5, dpi = 300)
@@ -287,6 +292,7 @@ bump <- df_for_bump %>%
   xlab('Game-') +
   ylab('Ranking') +
   labs(title = 'Bump Chart',
+       subtitle = 'Effective for showing changing rankings across multiple dates. For large datasets, consider grouping lines using color',
        caption = 'visualization by PanggahDPutra, 2022')
 
 ggsave("ranking_bump.png", plot(bump), width = 7, height = 5, dpi = 300)
